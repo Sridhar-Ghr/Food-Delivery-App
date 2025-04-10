@@ -1,0 +1,27 @@
+High Level Description
+
+1. The website will list the restaurants.
+2. Each restaturant will list all the food items that the restaurant offer.
+3. customer can select multiple food items from different restaurants
+4. After selection, the order summary along with price for each item and the total amount will be displayed in same 
+   or next page.
+
+
+First Page:
+
+1. Restaurant logo or The name of it
+2. A table or nicely ordered divisions are used to list Each restaurant
+3. Each restaurant will have a html element similar to airline ticketing systems where ticket pricings are displayed.
+4. customers shall be able to view all the available items and add to the order cart.
+5. Once all the order items are selected, customers shall be able to view the order summary.
+6. The order summary needs to be displayed in the next page.
+7. The customer needs to enter their address to deliver the food.
+8. Food order needs to be sent to the restaurant and diplay a message, your order is in progress
+
+Required pages
+
+1. Home page in html
+2. A CSS page for styles
+3. Java script page for node js
+4. HTML page for order summary
+
