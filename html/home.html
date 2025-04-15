@@ -1,19 +1,75 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Annapurna Food delivery</title>
-</head>
-<link rel="stylesheet" href="food delivery app/css/styles.css">
-<body>
-<div class="banner-div-gap">This section is for gap above the banner</div>
-<div class="banner-div">This section is for the banner</div>
-<div class="banner-div-gap">This section is for gap between the banner and its lower section. It contains description </div>
-<br>
-<div class="restaurant-listing-div">Restaurant one</div>
-<br>
-<div class="restaurant-listing-div">Restaurant two</div>
-<br>
-<div class="restaurant-listing-div">Restaurnat three</div>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annapurna Food delivery</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="text/javascript">
+        let orderList = "";
+        function displayOrder(selectedItem) {
+            orderList += selectedItem + "<br>";
+            document.getElementById("order-summary-div").innerHTML = orderList;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="banner-div-gap"></div>
+    <div class="banner-div">
+        <h1>Annapurna Online Restaurants</h1>
+    </div>
+
+    <div class="banner-div-gap"> Welcome to Annapurna. A delightful place to order indian food. We offer the top
+        restaurants to order food from. We hope you have a great selection </div>
+    <br>
+    <div class="restaurant-listing-div">Restaurant one</div>
+
+
+    <select title="foods" id="hr-select-one" onchange="displayOrder(this.value)">
+        <option value="">Choose a Food</option>
+        <hr />
+        <optgroup label="Breakfast">
+            <option value="Idly" >Idly</option>
+            <option value="Poori">Poori</option>
+            <option value="Ragi Java">Ragi Java</option>
+            <option value="Bajji">Bajji</option>
+        </optgroup>
+    </select>
+
+    <br>
+    <div class="restaurant-listing-div">Restaurant two</div>
+    <select title="foods" id="hr-select-two" onchange="displayOrder(this.value)">
+        <option value="">Choose a Food</option>
+        <hr />
+        <optgroup label="Main course">
+            <option value="Curry one">Curry one</option>
+            <option value="Curry two">Curry two</option>
+            <Option value="Rice">Rice</Option>
+            <option value="Roti">Roti</option>
+        </optgroup>
+    </select>
+
+    <br>
+    <div class="restaurant-listing-div">Restaurant three</div>
+
+    <select title="foods" id="hr-select-three" onchange="displayOrder(this.value)">
+        <option value="">Choose a Food</option>
+        <hr />
+        <optgroup label="Main course">
+            <option value="Curry one">Curry one</option>
+            <option value="Curry two">Curry two</option>
+            <Option value="Rice">Rice</Option>
+            <option value="Roti">Roti</option>
+        </optgroup>
+    </select>
+
+    <div class="order-div-gap">
+        Please verify your order below
+        <div id="order-summary-div" class="order-summary-div"></div>
+    </div>
 </body>
+
 </html>

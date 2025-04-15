@@ -1,14 +1,44 @@
 .banner-div-gap{
 border: 2px;
+background-color: cyan;
+padding:0.2rem;
 }
 
 .banner-div{
-border: 14px;
-background-image: -webkit-gradient();
-
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    z-index: 3;
+    -webkit-backdrop-filter: saturate(180%) blur(1.25rem);
+    backdrop-filter: saturate(180%) blur(1.25rem);
+    background-color: #e7eff0b8;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: .825rem 2.5rem;
+    display: flex;
+    position: sticky;
+    top: 0;
 }
 
 .restaurant-listing-div{
 border: 14px;
 background-blend-mode: luminosity;
+}
+
+.order-div-gap{
+    border: 10px;
+    background-color:aliceblue;
+    padding:0.2rem;
+    display:block;
+    }
+
+.order-summary-div{
+    align-items: center;
+    -webkit-backdrop-filter: saturate(180%) blur(1.25rem);
+    backdrop-filter: saturate(180%) blur(1.25rem);
 }
