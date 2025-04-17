@@ -1,3 +1,13 @@
+.body-div{
+    max-width: 80rem;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: gold;  
+    border-style:double;
+    border-width: 2rem;
+}
+
 .banner-div-gap{
 border: 2px;
 background-color: cyan;
@@ -6,19 +16,15 @@ text-align: center;
 }
 
 .banner-div{
-    max-width: 80rem;
+    max-width: 75rem;
     margin-left: auto;
     margin-right: auto;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    display: flex;
     z-index: 3;
     -webkit-backdrop-filter: saturate(180%) blur(1.25rem);
     backdrop-filter: saturate(180%) blur(1.25rem);
     background-color: #e7eff0b8;
     justify-content: center;
-    align-items: center;
     width: 100%;
     padding: .825rem 2.5rem;
     display: flex;
@@ -29,16 +35,17 @@ text-align: center;
 .restaurant-title-div{
     border: 2px;
     background-color:tomato;
-    padding:0.2rem;
     text-align: center;
-    text-rendering: auto;
-    text-decoration: tomato;
     padding: 0.5rem;
+    font-size:1.5rem;
 }
 .restaurant-listing-div{
-border: 14px;
+border: 20px;
 background-blend-mode: luminosity;
 text-align: center;
+text-decoration: aqua;
+font-size: 4rem;
+
 }
 
 .order-div-gap{
@@ -50,7 +57,6 @@ text-align: center;
 
 .order-summary-div{
     align-items: center;
-    -webkit-backdrop-filter: saturate(180%) blur(1.25rem);
     backdrop-filter: saturate(180%) blur(1.25rem);
     text-align: center;
 }
