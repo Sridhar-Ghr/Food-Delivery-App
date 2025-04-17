@@ -2,6 +2,7 @@
 border: 2px;
 background-color: cyan;
 padding:0.2rem;
+text-align: center;
 }
 
 .banner-div{
@@ -25,15 +26,25 @@ padding:0.2rem;
     top: 0;
 }
 
+.restaurant-title-div{
+    border: 2px;
+    background-color:tomato;
+    padding:0.2rem;
+    text-align: center;
+    text-rendering: auto;
+    text-decoration: tomato;
+    padding: 0.5rem;
+}
 .restaurant-listing-div{
 border: 14px;
 background-blend-mode: luminosity;
+text-align: center;
 }
 
 .order-div-gap{
     border: 10px;
     background-color:aliceblue;
-    padding:0.2rem;
+    padding:2rem;
     display:block;
     }
 
@@ -41,4 +52,5 @@ background-blend-mode: luminosity;
     align-items: center;
     -webkit-backdrop-filter: saturate(180%) blur(1.25rem);
     backdrop-filter: saturate(180%) blur(1.25rem);
+    text-align: center;
 }

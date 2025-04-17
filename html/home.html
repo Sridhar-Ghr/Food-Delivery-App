@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="../css/styles.css">
     <script type="text/javascript">
         let orderList = "";
+        let itemPrice=0;
+        let orderTotal=0;
         function displayOrder(selectedItem) {
+            itemPrice=parseInt(selectedItem.split('-')[1]);
+            orderTotal+=itemPrice;
             orderList += selectedItem + "<br>";
-            document.getElementById("order-summary-div").innerHTML = orderList;
+            document.getElementById("order-summary-div").innerHTML = orderList + "<br>" + "Order Total is: " + orderTotal;
+            
         }
     </script>
 </head>
@@ -25,50 +30,50 @@
     <div class="banner-div-gap"> Welcome to Annapurna. A delightful place to order indian food. We offer the top
         restaurants to order food from. We hope you have a great selection </div>
     <br>
-    <div class="restaurant-listing-div">Restaurant one</div>
+    <div class="restaurant-listing-div">
 
-
+    <div class="restaurant-title-div">Breakfast Restaurant</div>
     <select title="foods" id="hr-select-one" onchange="displayOrder(this.value)">
         <option value="">Choose a Food</option>
         <hr />
         <optgroup label="Breakfast">
-            <option value="Idly" >Idly</option>
-            <option value="Poori">Poori</option>
-            <option value="Ragi Java">Ragi Java</option>
-            <option value="Bajji">Bajji</option>
+            <option value="Idly - 35" >Idly</option>
+            <option value="Poori - 35">Poori</option>
+            <option value="Ragi Java - 20">Ragi Java</option>
+            <option value="Bajji - 30">Bajji</option>
         </optgroup>
     </select>
 
     <br>
-    <div class="restaurant-listing-div">Restaurant two</div>
+    <div class="restaurant-title-div">Lunch Restaurant</div>
     <select title="foods" id="hr-select-two" onchange="displayOrder(this.value)">
         <option value="">Choose a Food</option>
         <hr />
         <optgroup label="Main course">
-            <option value="Curry one">Curry one</option>
-            <option value="Curry two">Curry two</option>
-            <Option value="Rice">Rice</Option>
-            <option value="Roti">Roti</option>
+            <option value="Curry one - 30">Curry one</option>
+            <option value="Curry two - 30">Curry two</option>
+            <Option value="Rice - 50">Rice</Option>
+            <option value="Roti - 50">Roti</option>
         </optgroup>
     </select>
 
     <br>
-    <div class="restaurant-listing-div">Restaurant three</div>
 
+    <div class="restaurant-title-div">Meals Restaurant</div>
     <select title="foods" id="hr-select-three" onchange="displayOrder(this.value)">
         <option value="">Choose a Food</option>
         <hr />
         <optgroup label="Main course">
-            <option value="Curry one">Curry one</option>
-            <option value="Curry two">Curry two</option>
-            <Option value="Rice">Rice</Option>
-            <option value="Roti">Roti</option>
+            <option value="Curry one - 30">Curry one</option>
+            <option value="Curry two - 30">Curry two</option>
+            <Option value="Rice - 50">Rice</Option>
+            <option value="Roti - 50">Roti</option>
         </optgroup>
     </select>
-
+</div>
     <div class="order-div-gap">
-        Please verify your order below
-        <div id="order-summary-div" class="order-summary-div"></div>
+        
+        <div id="order-summary-div" class="order-summary-div">Please verify your order below</div>
     </div>
 </body>
 
