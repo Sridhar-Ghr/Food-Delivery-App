@@ -6,7 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annapurna Food delivery</title>
 
-    <link rel="stylesheet" href="/css/styles.css">
+   <!--  <link rel="stylesheet" href="../css/styles.css"> -->
+
+   <style>
+    .body-div{
+    max-width: 80rem;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: gold;  
+    border-style:double;
+    border-width: 2rem;
+}
+
+.banner-div-gap{
+border: 2px;
+background-color: cyan;
+padding:0.2rem;
+text-align: center;
+}
+
+.banner-div{
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    background-color: #e7eff0b8;
+    justify-content: center;
+    width: 100%;
+    padding: .825rem 2.5rem;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+.restaurant-title-div{
+    border: 2px;
+    background-color:tomato;
+    text-align: center;
+    padding: 0.5rem;
+    font-size:1.5rem;
+}
+.restaurant-listing-div{
+border: 20px;
+background-blend-mode: luminosity;
+text-align: center;
+text-decoration: aqua;
+font-size: 4rem;
+
+}
+
+.order-div-gap{
+    border: 10px;
+    background-color:aliceblue;
+    padding:2rem;
+    display:block;
+    }
+
+.order-summary-div{
+    align-items: center;
+    backdrop-filter: saturate(180%) blur(1.25rem);
+    text-align: center;
+}
+   </style>
     <script type="text/javascript">
         let orderList = "";
         let itemPrice = 0;
@@ -15,7 +77,7 @@
             itemPrice = parseInt(selectedItem.split('-')[1]);
             orderTotal += itemPrice;
             orderList += selectedItem + "<br>";
-            document.getElementById("order-summary-div").innerHTML = orderList + "<br>" + "Order Total is: " + orderTotal;
+            document.getElementById("order-summary-div").innerHTML += "<br>" + orderList + "<br>" + "Order Total is: " + orderTotal;
 
         }
     </script>
@@ -23,6 +85,7 @@
 
 <body>
     <div class="body-div">
+        <form action="/orderconfirmation" method="post">
         <div class="banner-div-gap"></div>
         <div class="banner-div">
             <h1>Annapurna Online Restaurants</h1>
@@ -76,6 +139,11 @@
 
             <div id="order-summary-div" class="order-summary-div">Please verify your order below</div>
         </div>
+
+        <div class="order-summary-div"> Order Confirmation <br>
+           <input type="submit" value="Order Confirmation">
+        </div>
+      </form>
     </div>
 </body>
 
