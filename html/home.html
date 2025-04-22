@@ -23,7 +23,8 @@
 border: 2px;
 background-color: cyan;
 padding:0.2rem;
-text-align: center;
+text-align:center;
+
 }
 
 .banner-div{
@@ -77,7 +78,8 @@ font-size: 4rem;
             itemPrice = parseInt(selectedItem.split('-')[1]);
             orderTotal += itemPrice;
             orderList += selectedItem + "<br>";
-            document.getElementById("order-summary-div").innerHTML += "<br>" + orderList + "<br>" + "Order Total is: " + orderTotal;
+            document.getElementById("order-summary-div").innerHTML = orderList + "<br>" + "Order Total is: " + orderTotal;
+            document.getElementById("order-summary-for-post-request").value=document.getElementById("order-summary-div").innerHTML;
 
         }
     </script>
@@ -136,10 +138,11 @@ font-size: 4rem;
             </select>
         </div>
         <div class="order-div-gap">
+            <br> Please verify your order below
 
-            <div id="order-summary-div" class="order-summary-div">Please verify your order below</div>
+            <div id="order-summary-div" class="order-summary-div"></div>
         </div>
-
+        <input type="hidden" name="order-summary" id="order-summary-for-post-request">
         <div class="order-summary-div"> Order Confirmation <br>
            <input type="submit" value="Order Confirmation">
         </div>
