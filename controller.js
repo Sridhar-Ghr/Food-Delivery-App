@@ -28,7 +28,7 @@ const server=http.createServer((req,res)=>{
          const postReqData=querystring.parse(body);
          const ordersummary=postReqData;
          const {orderSummary}=ordersummary;
-         const fileContent=orderSummary;
+         const fileContent=orderSummary.replace(/<br>/g,'  ')+'\n';
 
          res.writeHead(200,{'Content-Type':'text/html'});
          res.end(`<html><body>The order summary is: <br><p style="display:flex; align="center"">${orderSummary}</p></body></html>`);
@@ -40,7 +40,7 @@ const server=http.createServer((req,res)=>{
                console.log('There is some issue while accessing the file',err);
             
             //Write to the file
-            fs.writeFile(fd,fileContent,(err,written,string)=>{
+            fs.appendFileSync(fd,fileContent,(err,written,string)=>{
                if(err)
                   console.log('Unable to write to the file',err);
                else{
