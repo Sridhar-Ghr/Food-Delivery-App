@@ -26,9 +26,10 @@ const server=http.createServer((req,res)=>{
       req.on('end',()=>{
          const postReqData=querystring.parse(body);
          const ordersummary=postReqData;
+         const {orderSummary}=ordersummary;
 
          res.writeHead(200,{'Content-Type':'text/html'});
-         res.end(`<html><body>The order summary is: <br><p>${JSON.stringify(ordersummary)}</p></body></html>`);
+         res.end(`<html><body>The order summary is: <br><p style="display:flex; align="center"">${orderSummary}</p></body></html>`);
       });
    }
 
