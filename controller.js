@@ -3,11 +3,11 @@
 const http=require('http');
 const fs=require('fs');
 const querystring=require('querystring');
-const orderHistoryFilePath='.\\orderHistory.txt';
+const orderHistoryFilePath='.\orderHistory.txt';
 
 const server=http.createServer((req,res)=>{
    if(req.url==='/'){
-    fs.readFile('.\\html\\home.html',(err,data)=>{
+    fs.readFile('html/home.html',(err,data)=>{
        if(err){
         res.writeHead(500,{'Content-Type':'text/html'});
         res.end(err);

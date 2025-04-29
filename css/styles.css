@@ -12,7 +12,8 @@
 border: 2px;
 background-color: cyan;
 padding:0.2rem;
-text-align: center;
+text-align:center;
+
 }
 
 .banner-div{
@@ -50,6 +51,7 @@ font-size: 4rem;
     background-color:aliceblue;
     padding:2rem;
     display:block;
+    text-align: center;
     }
 
 .order-summary-div{

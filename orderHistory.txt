@@ -1,1 +1,1 @@
-Curry one - 30  Rice - 50    Order Total is: 80
+Idly - 35  Poori - 35  Bajji - 30    Order Total is: 100

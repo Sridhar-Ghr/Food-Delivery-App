@@ -6,71 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annapurna Food delivery</title>
 
-   <!--  <link rel="stylesheet" href="../css/styles.css"> -->
+    <!-- <link rel="stylesheet" href=""> -->
 
-   <style>
-    .body-div{
-    max-width: 80rem;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-color: gold;  
-    border-style:double;
-    border-width: 2rem;
-}
+    <style>
+        .body-div {
+            max-width: 80rem;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: gold;
+            border-style: double;
+            border-width: 2rem;
+        }
 
-.banner-div-gap{
-border: 2px;
-background-color: cyan;
-padding:0.2rem;
-text-align:center;
+        .banner-div-gap {
+            border: 2px;
+            background-color: cyan;
+            padding: 0.2rem;
+            text-align: center;
 
-}
+        }
 
-.banner-div{
-    max-width: 75rem;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    background-color: #e7eff0b8;
-    justify-content: center;
-    width: 100%;
-    padding: .825rem 2.5rem;
-    display: flex;
-    position: sticky;
-    top: 0;
-}
+        .banner-div {
+            max-width: 75rem;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            background-color: #e7eff0b8;
+            justify-content: center;
+            width: 100%;
+            padding: .825rem 2.5rem;
+            display: flex;
+            position: sticky;
+            top: 0;
+        }
 
-.restaurant-title-div{
-    border: 2px;
-    background-color:tomato;
-    text-align: center;
-    padding: 0.5rem;
-    font-size:1.5rem;
-}
-.restaurant-listing-div{
-border: 20px;
-background-blend-mode: luminosity;
-text-align: center;
-text-decoration: aqua;
-font-size: 4rem;
+        .restaurant-title-div {
+            border: 2px;
+            background-color: tomato;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+        }
 
-}
+        .restaurant-listing-div {
+            border: 20px;
+            background-blend-mode: luminosity;
+            text-align: center;
+            text-decoration: aqua;
+            font-size: 4rem;
 
-.order-div-gap{
-    border: 10px;
-    background-color:aliceblue;
-    padding:2rem;
-    display:block;
-    text-align: center;
-    }
+        }
 
-.order-summary-div{
-    align-items: center;
-    backdrop-filter: saturate(180%) blur(1.25rem);
-    text-align: center;
-}
-   </style>
+        .order-div-gap {
+            border: 10px;
+            background-color: aliceblue;
+            padding: 2rem;
+            display: block;
+            text-align: center;
+        }
+
+        .order-summary-div {
+            align-items: center;
+            backdrop-filter: saturate(180%) blur(1.25rem);
+            text-align: center;
+        }
+    </style>
+
     <script type="text/javascript">
         let orderList = "";
         let itemPrice = 0;
@@ -80,74 +82,74 @@ font-size: 4rem;
             orderTotal += itemPrice;
             orderList += selectedItem + "<br>";
             document.getElementById("order-summary-div").innerHTML = orderList + "<br>" + "Order Total is: " + orderTotal;
-            document.getElementById("order-summary-for-post-request").value=document.getElementById("order-summary-div").innerHTML;
+            document.getElementById("order-summary-for-post-request").value = document.getElementById("order-summary-div").innerHTML;
 
         }
     </script>
-</head> 
+</head>
 
 <body>
     <div class="body-div">
         <form action="/orderconfirmation" method="post">
-        <div class="banner-div-gap"></div>
-        <div class="banner-div">
-            <h1>Annapurna Online Restaurants</h1>
-        </div>
+            <div class="banner-div-gap"></div>
+            <div class="banner-div">
+                <h1>Annapurna Online Restaurants</h1>
+            </div>
 
-        <div class="banner-div-gap"> Welcome to Annapurna. A delightful place to order indian food. We offer the top
-            restaurants to order food from. We hope you have a great selection </div>
-        <br>
-        <div class="restaurant-listing-div">
-
-            <div class="restaurant-title-div">A1 Breakfasts</div>
-            <select title="foods" id="hr-select-one" onchange="displayOrder(this.value)">
-                <option value="">Choose a Food</option>
-                <hr />
-                <optgroup label="Breakfast">
-                    <option value="Idly - 35">Idly</option>
-                    <option value="Poori - 35">Poori</option>
-                    <option value="Ragi Java - 20">Ragi Java</option>
-                    <option value="Bajji - 30">Bajji</option>
-                </optgroup>
-            </select>
-
+            <div class="banner-div-gap"> Welcome to Annapurna. A delightful place to order indian food. We offer the top
+                restaurants to order food from. We hope you have a great selection </div>
             <br>
-            <div class="restaurant-title-div">Dwithiya Restaurant</div>
-            <select title="foods" id="hr-select-two" onchange="displayOrder(this.value)">
-                <option value="">Choose a Food</option>
-                <hr />
-                <optgroup label="Main course">
-                    <option value="Curry one - 30">Curry one</option>
-                    <option value="Curry two - 30">Curry two</option>
-                    <Option value="Rice - 50">Rice</Option>
-                    <option value="Roti - 50">Roti</option>
-                </optgroup>
-            </select>
+            <div class="restaurant-listing-div">
 
-            <br>
+                <div class="restaurant-title-div">A1 Breakfasts</div>
+                <select title="foods" id="hr-select-one" onchange="displayOrder(this.value)">
+                    <option value="">Choose a Food</option>
+                    <hr />
+                    <optgroup label="Breakfast">
+                        <option value="Idly - 35">Idly</option>
+                        <option value="Poori - 35">Poori</option>
+                        <option value="Ragi Java - 20">Ragi Java</option>
+                        <option value="Bajji - 30">Bajji</option>
+                    </optgroup>
+                </select>
 
-            <div class="restaurant-title-div">Khaoji Restaurant</div>
-            <select title="foods" id="hr-select-three" onchange="displayOrder(this.value)">
-                <option value="">Choose a Food</option>
-                <hr />
-                <optgroup label="Main course">
-                    <option value="Curry one - 30">Curry one</option>
-                    <option value="Curry two - 30">Curry two</option>
-                    <Option value="Rice - 50">Rice</Option>
-                    <option value="Roti - 50">Roti</option>
-                </optgroup>
-            </select>
-        </div>
-        <div class="order-div-gap">
-            <br> Please verify your order below
+                <br>
+                <div class="restaurant-title-div">Dwithiya Restaurant</div>
+                <select title="foods" id="hr-select-two" onchange="displayOrder(this.value)">
+                    <option value="">Choose a Food</option>
+                    <hr />
+                    <optgroup label="Main course">
+                        <option value="Curry one - 30">Curry one</option>
+                        <option value="Curry two - 30">Curry two</option>
+                        <Option value="Rice - 50">Rice</Option>
+                        <option value="Roti - 50">Roti</option>
+                    </optgroup>
+                </select>
 
-            <div id="order-summary-div" class="order-summary-div"></div>
-        </div>
-        <input type="hidden" name="orderSummary" id="order-summary-for-post-request">
-        <div class="order-summary-div"> Order Confirmation <br>
-           <input type="submit" value="Order Confirmation">
-        </div>
-      </form>
+                <br>
+
+                <div class="restaurant-title-div">Khaoji Restaurant</div>
+                <select title="foods" id="hr-select-three" onchange="displayOrder(this.value)">
+                    <option value="">Choose a Food</option>
+                    <hr />
+                    <optgroup label="Main course">
+                        <option value="Curry one - 30">Curry one</option>
+                        <option value="Curry two - 30">Curry two</option>
+                        <Option value="Rice - 50">Rice</Option>
+                        <option value="Roti - 50">Roti</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="order-div-gap">
+                <br> Please verify your order below
+
+                <div id="order-summary-div" class="order-summary-div"></div>
+            </div>
+            <input type="hidden" name="orderSummary" id="order-summary-for-post-request">
+            <div class="order-summary-div"> Order Confirmation <br>
+                <input type="submit" value="Order Confirmation">
+            </div>
+        </form>
     </div>
 </body>
 
